@@ -1,4 +1,4 @@
-# iOS SDK
+# FriendlyScore Finance Manager iOS SDK
 
 ## Overview
 
