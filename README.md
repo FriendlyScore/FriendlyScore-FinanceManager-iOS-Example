@@ -80,6 +80,14 @@ FriendlyScore.reportAvailability { reports in
 }
 ```
 
+Possible status values: 
+```swift
+enum ReportStatus {
+    case ready
+    case notReady
+    case noData
+```
+
 ### UI
 
 Start by importing `FriendlyScoreCore` and `FriendlyScoreFinanceManager`:
@@ -135,7 +143,7 @@ self.view.addSubview(forecastButton)
 ```swift
     FriendlyScore.showInsights(with: myCredentials, theme:.dark)
 ```
-There is also possibility to create custom theme by setting list of key-value json file. Please follow our tutorial to [learn more](https://friendlyscore.com/ios/customtheme) .
+There is also possibility to create custom theme by setting list of key-value json file. Please follow our tutorial to [learn more](https://github.com/FriendlyScore/FriendlyScore-FinanceManager-iOS-Example/edit/master/colors.md) .
 
 
 
