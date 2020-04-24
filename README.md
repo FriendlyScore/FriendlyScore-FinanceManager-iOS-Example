@@ -143,7 +143,7 @@ self.view.addSubview(forecastButton)
 ```swift
     FriendlyScore.showInsights(with: myCredentials, theme:.dark)
 ```
-There is also possibility to create custom theme by setting list of key-value json file. Please follow our tutorial to [learn more](https://github.com/FriendlyScore/FriendlyScore-FinanceManager-iOS-Example/edit/master/pfm_colors.md) .
+There is also possibility to create custom theme by setting list of key-value json file. Please follow our tutorial to [learn more](https://github.com/FriendlyScore/FriendlyScore-FinanceManager-iOS-Example/blob/master/pfm_colors.md) .
 
 
 
