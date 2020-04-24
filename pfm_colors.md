@@ -1,5 +1,5 @@
 # FriendlyScore Finance Manager Custom UI Theme
-`FriendlyScoreFinanceManager` can be presented with predefined UI theme (`light` and `dark`) but there is also posobility to create custom sets of colors.  Based on [template file](https://friendlyscore.com), edit key-value list of colors to match your brand's guildlines. Then, save edited file in your project's document path and load it as follows:
+`FriendlyScoreFinanceManager` can be presented with predefined UI theme (`light` and `dark`) but there is also possibility to create custom sets of colors.  Based on [template file](https://friendlyscore.com), edit key-value list of colors to match your brand's guildlines. Then, save edited file in your project's document path and load it as follows:
 ```swift
 FriendlyScore.showInsights(with: myCredentials, theme:.custom("path/to/your/theme.json"))
 ```
