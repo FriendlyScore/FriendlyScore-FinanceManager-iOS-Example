@@ -37,57 +37,6 @@ CocoaPods will install and embed all sources and dependencies into your app.
 ## Implementation
 When `FriendlyScoreFinanceManager` is available in customer panel, the SDK will populate a grid of banks to enable connecting and data sharing.
 
-### App Delegate
-
-Start with importing `FriendlyScoreCore` and `FriendlyScoreFinanceManager` framework in your App Delegate:
-
-```swift
-import FriendlyScoreCore
-import FriendlyScoreFinanceManager
-```
-
-Then configure `FriendlyScoreFinanceManager` in `application:didFinishLaunchingWithOptions`:
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customisation after application launch.
-    FriendlyScore.configureFinanceManager()
-    return true
-}
-```
-### Check Report Availability
-
-Before presenting any view to the user, there is posibilty to check report statuses. If you want to check that, start from importing `FriendlyScoreCore` and `FriendlyScoreFinanceManager`:
-
-
-```swift
-import FriendlyScoreCore
-import FriendlyScoreFinanceManager
-```
-then call report availability function:
-
-```swift
-FriendlyScore.reportAvailability { reports in
-    //print all available reports:
-    for report in reports {
-    switch report.id {
-        case .insights:
-        print("Insights status: \(report.status)")
-        case .forecast:
-        print("Forecase status: \(report.status)")
-        }
-    }
-}
-```
-
-Possible status values: 
-```swift
-enum ReportStatus {
-    case ready
-    case notReady
-    case noData
-```
-
 ### UI
 
 Start by importing `FriendlyScoreCore` and `FriendlyScoreFinanceManager`:
