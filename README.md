@@ -94,8 +94,60 @@ self.view.addSubview(forecastButton)
 ```
 There is also possibility to create custom theme by setting list of key-value json file. Please follow our tutorial to [learn more](https://github.com/FriendlyScore/FriendlyScore-FinanceManager-iOS-Example/blob/master/pfm_colors.md) .
 
+#### Custom category color and icon for Insights
+Apart of UI colors you can also replace default categories icons and colors. Use example below:
 
+```swift
+    FriendlyScore.change(color: UIColor.red, icon: UIImage(named: "my_icon")!, for: .otherExpenditure)
+   
+   // then present UI
+    FriendlyScore.showInsights(with: myCredentials, theme:.dark)
+```
+Here is complete list of categories:
 
+```swift
+public enum Category:String {
+    case bankTransaction = "Bank Transactions"
+    case bills = "Bills"
+    case creditRepayments = "Credit Repayments"
+    case education = "Education"
+    case enjoyment = "Enjoyment"
+    case health = "Health"
+    case homeAndFood = "Home supercategory"
+    case home = "Home"
+    case insurance = "Insurance"
+    case otherExpenditure = "Other Expenditure"
+    case profesionalServices = "Professional Services"
+    case retail = "Retail"
+    case savingsAndInvestments = "Savings & Investments"
+    case travel = "Travel"
+    case tvInternetCommunication = "TV, Internet & Communication"
+    case mortgageRent = "Mortgage/Rent"
+    case councilTax = "Council Tax"
+    case healthcare = "Healthcare"
+    case legal = "Legal"
+    case transportTravel = "Transport & Travel"
+    case utils = "Utilities"
+    case accommodation = "Accommodation"
+    case bankCharges = "Bank Charges"
+    case groceries = "Groceries & Housekeeping"
+    case transferOut = "Transfer Out"
+    case furniture = "Furniture & Appliance Rentals"
+    case cashWithdrawal = "Cash Withdrawal"
+    case clothing = "Clothing & Fashion"
+    case entertainment = "Entertainment"
+    case family = "Family"
+    case foodDrink = "Food & Drink"
+    case gambling = "Gambling"
+    case generalRetail = "General Retail"
+    case gifts = "Gifts, Postage & Stationery"
+    case healthBeauty = "Health & Beauty"
+    case hobbies = "Hobbies & Interests"
+    case personalTech = "Personal Technology"
+    case social = "Social Activities"
+    case sportsFitness = "Sports & Fitness"
+}
+```
 
 ### Events
 
