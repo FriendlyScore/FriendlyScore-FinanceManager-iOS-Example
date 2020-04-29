@@ -85,6 +85,39 @@ self.view.addSubview(forecastButton)
 ```
 `FriendlyScore` will be presented as a modal view at the automatically found top-most view. 
 
+### Check Report Availability
+
+ Before presenting any view to the user, there is posibilty to check report statuses. If you want to check that, start from importing `FriendlyScoreCore` and `FriendlyScoreFinanceManager`:
+
+
+ ```swift
+ import FriendlyScoreCore
+ import FriendlyScoreFinanceManager
+ ```
+ then call report availability function:
+
+ ```swift
+ FriendlyScore.reportAvailability(with: myCredentials) { reports in
+    //print all available reports:
+    for report in reports {
+    switch report.id {
+        case .insights:
+        print("Insights status: \(report.status)")
+        case .forecast:
+        print("Forecase status: \(report.status)")
+    }
+   }    
+ }
+ ```
+
+ Possible status values: 
+ ```swift
+ enum ReportStatus {
+     case ready
+     case notReady
+     case noData
+ ```
+
 
 ### Theme
 `FriendlyScoreFinanceManager` can be presented with  `light` (deafult) or `dark` theme, wiich are predefined list of colors and icons.
